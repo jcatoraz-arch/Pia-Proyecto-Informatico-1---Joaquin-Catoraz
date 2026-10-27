@@ -3,11 +3,13 @@ body {
     font-family: 'Inter', sans-serif;
     color: #111;
     background-color: #fff;
+    margin: 0;
 }
 
 .navbar {
     padding: 20px 0;
     background-color: #fff;
+    border-bottom: 1px solid #eee;
 }
 
 .navbar-brand {
@@ -31,6 +33,14 @@ body {
     color: #777;
 }
 
+.nav-link.active {
+    font-weight: 700;
+}
+
+#menu {
+    justify-content: flex-end;
+}
+
 .portada {
     min-height: 85vh;
     display: flex;
@@ -51,6 +61,7 @@ body {
     font-size: 13px;
     letter-spacing: 5px;
     margin-bottom: 24px;
+    color: #777;
 }
 
 .portada h1 {
@@ -61,6 +72,7 @@ body {
     margin-bottom: 24px;
     color: #111;
 }
+
 .portada h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 42px;
@@ -82,15 +94,95 @@ body {
     padding: 16px 28px;
     text-decoration: none;
     margin-top: 15px;
+    border: 1px solid #111;
+    transition: background-color 0.3s;
 }
 
 .btn-kto:hover {
     background-color: #333;
+    border-color: #333;
     color: #fff;
 }
 
-#menu {
-    justify-content: flex-end;
+.seccion-caracteristicas {
+    background-color: #fff;
+    color: #111;
+    padding: 80px 0;
+    min-height: 80vh;
+}
+
+.seccion-caracteristicas h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.descripcion {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #666;
+    line-height: 1.7;
+}
+
+.tarjeta {
+    height: 100%;
+    padding: 0;
+    border: 1px solid #eee;
+    background-color: #fff;
+    transition: transform 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 0;
+}
+
+.tarjeta h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #111;
+    margin: 20px 20px 10px;
+}
+
+.tarjeta p {
+    color: #666;
+    line-height: 1.7;
+    margin: 0 20px 15px;
+}
+
+.enlace-producto {
+    display: inline-block;
+    color: #111;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 20px 25px;
+}
+
+.enlace-producto:hover {
+    color: #777;
+    text-decoration: underline;
+}
+
+.pie-pagina {
+    padding: 25px 0;
+    border-top: 1px solid #eee;
+    text-align: center;
+    color: #666;
+    font-size: 13px;
+}
+
+.pie-pagina p {
+    margin: 0;
 }
 
 @media (max-width: 991px) {
@@ -103,14 +195,127 @@ body {
     .portada h1 {
         font-size: 42px;
     }
+
     .portada h2 {
-    font-size: 32px;
+        font-size: 32px;
     }
-    .portada p {
-        color: #222;
+
+    .portada img {
+        margin-top: 30px;
     }
 
     .nav-link {
         margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .seccion-caracteristicas {
+        padding: 50px 0;
+    }
+
+    .seccion-caracteristicas h1 {
+        font-size: 36px;
+    }
+
+    .tarjeta img {
+        height: 300px;
+    }
+
+    .tarjeta {
+        margin-bottom: 10px;
+    }
+}
+
+.seccion-diseno {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.texto-diseno {
+    max-width: 750px;
+    margin-bottom: 40px;
+}
+
+.texto-diseno h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.texto-diseno > p:last-child {
+    color: #666;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.bloque-diseno {
+    height: 100%;
+    border: 1px solid #eee;
+    background-color: #fff;
+}
+
+.bloque-diseno img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+}
+
+.contenido-diseno {
+    padding: 25px;
+}
+
+.contenido-diseno h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.contenido-diseno p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+.frase-diseno {
+    margin-top: 80px;
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.frase-diseno h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.frase-diseno p {
+    color: #666;
+    margin: 15px 0 25px;
+}
+
+@media (max-width: 768px) {
+    .seccion-diseno {
+        padding: 50px 0;
+    }
+
+    .texto-diseno h1 {
+        font-size: 36px;
+    }
+
+    .bloque-diseno img {
+        height: 320px;
+    }
+
+    .frase-diseno {
+        margin-top: 50px;
+        padding: 40px 15px;
+    }
+
+    .frase-diseno h2 {
+        font-size: 28px;
     }
 }
