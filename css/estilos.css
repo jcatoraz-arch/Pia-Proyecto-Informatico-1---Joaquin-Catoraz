@@ -1,0 +1,116 @@
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #111;
+    background-color: #fff;
+}
+
+.navbar {
+    padding: 20px 0;
+    background-color: #fff;
+}
+
+.navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #111;
+}
+
+.navbar-brand:hover {
+    color: #555;
+}
+
+.nav-link {
+    color: #111;
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+.nav-link:hover {
+    color: #777;
+}
+
+.portada {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 90px 0;
+    background-image: url("../imagenes/KTOone.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.portada .col-lg-6:first-child {
+    position: relative;
+    z-index: 1;
+}
+
+.subtitulo {
+    font-size: 13px;
+    letter-spacing: 5px;
+    margin-bottom: 24px;
+}
+
+.portada h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    color: #111;
+}
+.portada h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+
+.portada p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #333;
+}
+
+.btn-kto {
+    display: inline-block;
+    background-color: #111;
+    color: #fff;
+    padding: 16px 28px;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.btn-kto:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+#menu {
+    justify-content: flex-end;
+}
+
+@media (max-width: 991px) {
+    .portada {
+        padding: 50px 0;
+        text-align: center;
+        background-position: 60% center;
+    }
+
+    .portada h1 {
+        font-size: 42px;
+    }
+    .portada h2 {
+    font-size: 32px;
+    }
+    .portada p {
+        color: #222;
+    }
+
+    .nav-link {
+        margin-left: 0;
+    }
+}
