@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KTO | Zapatillas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">KTO</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="caracteristicas.html">Colección</a></li>
+                        <li class="nav-item"><a class="nav-link" href="diseno.html">Diseño</a></li>
+                        <li class="nav-item"><a class="nav-link" href="especificaciones.html">Especificaciones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    </ul>
+                    <button id="tema-btn" class="tema-btn" type="button" aria-label="Cambiar tema">
+                        <span id="icono-tema">☾</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="productos-categoria">
+        <div class="container">
+            <p class="subtitulo">COLECCIÓN KTO</p>
+            <h1>Zapatillas</h1>
+            <p class="descripcion-categoria">Comodidad, movimiento y estilo urbano.</p>
+
+            <div class="row g-4 mt-4">
+                <div class="col-md-4">
+                    <article class="producto">
+                        <img src="../imagenes/zapatillas1.png" alt="Zapatillas KTO clasic court">
+                        <div class="producto-info">
+                            <h2>Classic Court</h2>
+                            <p>Un diseño clásico para todos los días.</p>
+                            <span>$85.000</span>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-4">
+                    <article class="producto">
+                        <img src="../imagenes/zapatillas2.png" alt="Zapatillas KTO urban tech">
+                        <div class="producto-info">
+                            <h2>Urban Tech</h2>
+                            <p>Estilo urbano con una estética moderna.</p>
+                            <span>$95.000</span>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-4">
+                    <article class="producto">
+                        <img src="../imagenes/zapatillas3.png" alt="Zapatillas KTO retro runner">
+                        <div class="producto-info">
+                            <h2>Retro Runner</h2>
+                            <p>Comodidad y personalidad en cada paso.</p>
+                            <span>$105.000</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <a href="caracteristicas.html" class="volver-coleccion">← Volver a la colección</a>
+        </div>
+    </main>
+
+    <footer class="pie-pagina">
+        <p>KTO © 2026 | Tu estilo. Tu movimiento.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/tema.js"></script>
+</body>
+</html>

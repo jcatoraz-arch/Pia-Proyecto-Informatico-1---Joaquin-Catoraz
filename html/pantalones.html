@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KTO | Pantalones</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">KTO</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="caracteristicas.html">Colección</a></li>
+                        <li class="nav-item"><a class="nav-link" href="diseno.html">Diseño</a></li>
+                        <li class="nav-item"><a class="nav-link" href="especificaciones.html">Especificaciones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    </ul>
+                    <button id="tema-btn" class="tema-btn" type="button" aria-label="Cambiar tema">
+                        <span id="icono-tema">☾</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="productos-categoria">
+        <div class="container">
+            <p class="subtitulo">COLECCIÓN KTO</p>
+            <h1>Pantalones</h1>
+            <p class="descripcion-categoria">Cortes cómodos y diseños pensados para moverte.</p>
+
+            <div class="row g-4 mt-4">
+                <div class="col-md-4">
+                    <article class="producto">
+                        <img src="../imagenes/pantalon1.png" alt="cargo blanco">
+                        <div class="producto-info">
+                            <h2>Cargo blanco brilloso</h2>
+                            <p>Un básico para combinar todos los días.</p>
+                            <span>$75.000</span>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-4">
+                    <article class="producto">
+                        <img src="../imagenes/pantalon2.png" alt="cargo azul">
+                        <div class="producto-info">
+                            <h2>Cargo Azul</h2>
+                            <p>Inspiración urbana y funcional.</p>
+                            <span>$89.000</span>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-md-4">
+                    <article class="producto">
+                        <img src="../imagenes/pantalon3.png" alt="cargo negro">
+                        <div class="producto-info">
+                            <h2>Cargo negro</h2>
+                            <p>Corte amplio para un estilo relajado.</p>
+                            <span>$95.000</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <a href="caracteristicas.html" class="volver-coleccion">← Volver a la colección</a>
+        </div>
+    </main>
+
+    <footer class="pie-pagina">
+        <p>KTO © 2026 | Tu estilo. Tu movimiento.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/tema.js"></script>
+</body>
+</html>
