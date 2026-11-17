@@ -1,164 +1,207 @@
 
+/* =================================
+   1. estilos generales
+================================= */
+
+/* configuracion de toda la pagina */
 body {
-    font-family: 'Inter', sans-serif;
-    color: #111;
-    background-color: #fff;
-    margin: 0;
+    font-family: 'Inter', sans-serif; /* tipo de letra */
+    color: #111; /* color del texto */
+    background: #fff; /* fondo blanco */
+    margin: 0; /* saca los margenes */
 }
 
-.navbar {
-    padding: 20px 0;
-    background-color: #fff;
-    border-bottom: 1px solid #eee;
-}
-
-.navbar-brand {
+/* tipo de letra para los titulos */
+h1, h2, h3 {
     font-family: 'Montserrat', sans-serif;
+}
+
+
+/* =================================
+   2. barra de navegacion
+================================= */
+
+/* estilos del menu */
+.navbar {
+    padding: 20px 0; /* espacio arriba y abajo */
+    background: #a9ecff;
+    border-bottom: 1px solid #eee; /* linea debajo del menu */
+}
+
+/* nombre de la marca */
+.navbar-brand {
     font-size: 36px;
-    font-weight: 700;
+    font-weight: 700; /* texto en negrita */
     color: #111;
 }
 
+/* cambia el color al pasar el mouse */
 .navbar-brand:hover {
     color: #555;
 }
 
+/* enlaces del menu */
 .nav-link {
     color: #111;
     font-size: 14px;
-    margin-left: 20px;
+    margin-left: 20px; /* separacion entre enlaces */
 }
 
 .nav-link:hover {
     color: #777;
 }
 
+/* marca la pagina actual */
 .nav-link.active {
     font-weight: 700;
 }
 
+/* acomoda el menu hacia la derecha */
 #menu {
     justify-content: flex-end;
 }
 
-.portada {
-    min-height: 85vh;
-    display: flex;
-    align-items: center;
-    padding: 90px 0;
-    background-image: url("../imagenes/KTOone.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+
+/* =================================
+   3. portada principal
+================================= */
+
+/* estilos de los subtitulos */
+.subtitulo {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px; /* separacion entre letras */
+    margin-bottom: 24px;
+    color: #777;
 }
 
+/* imagen y distribucion de la portada */
+.portada {
+    min-height: 85vh; /* altura de la portada */
+    display: flex; /* organiza los elementos */
+    align-items: center; /* centra los elementos */
+    padding: 90px 0; /* espacio interno */
+    background: url("../imagenes/KTOone.png") center / cover no-repeat;
+    /* coloca la imagen de fondo */
+}
+
+/* coloca el texto por encima de la imagen */
 .portada .col-lg-6:first-child {
     position: relative;
     z-index: 1;
 }
 
-.subtitulo {
-    font-size: 13px;
-    letter-spacing: 5px;
-    margin-bottom: 24px;
-    color: #777;
-}
-
+/* titulo principal */
 .portada h1 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 64px;
     font-weight: 700;
-    line-height: 1.1;
+    line-height: 1.1; /* espacio entre lineas */
     margin-bottom: 24px;
-    color: #111;
 }
 
+/* segundo titulo */
 .portada h2 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 42px;
     font-weight: 400;
     line-height: 1.2;
     margin-bottom: 24px;
 }
 
+/* texto de la portada */
 .portada p {
     font-size: 17px;
     line-height: 1.7;
     color: #333;
 }
 
+/* boton principal */
 .btn-kto {
     display: inline-block;
-    background-color: #111;
+    background: #111111;
     color: #fff;
-    padding: 16px 28px;
-    text-decoration: none;
+    padding: 16px 28px; /* espacio interno */
     margin-top: 15px;
     border: 1px solid #111;
-    transition: background-color 0.3s;
+    text-decoration: none; /* saca el subrayado */
+    transition: background-color 0.3s; /* suaviza el cambio */
 }
 
+/* efecto del boton al pasar el mouse */
 .btn-kto:hover {
-    background-color: #333;
+    background: #333;
     border-color: #333;
     color: #fff;
 }
 
+
+/* =================================
+   4. seccion de caracteristicas
+================================= */
+
+/* espacio y fondo de la seccion */
 .seccion-caracteristicas {
-    background-color: #fff;
+    background: #fff;
     color: #111;
     padding: 80px 0;
     min-height: 80vh;
 }
 
+/* titulo de caracteristicas */
 .seccion-caracteristicas h1 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 48px;
     font-weight: 700;
     margin-bottom: 20px;
 }
 
+/* descripcion de la seccion */
 .descripcion {
-    max-width: 650px;
-    margin: 0 auto;
+    max-width: 650px; /* ancho maximo */
+    margin: 0 auto; /* centra el texto */
     color: #666;
     line-height: 1.7;
 }
 
+/* tarjetas de caracteristicas */
 .tarjeta {
     height: 100%;
     padding: 0;
     border: 1px solid #eee;
-    background-color: #fff;
-    transition: transform 0.3s;
+    background: #fff;
+    transition: transform 0.3s; /* suaviza el movimiento */
 }
 
-.tarjeta:hover {
+/* mueve las tarjetas al pasar el mouse */
+.tarjeta:hover, .producto:hover {
     transform: translateY(-5px);
 }
 
-.tarjeta img {
+/* imagenes de las tarjetas y productos */
+.tarjeta img, .producto img {
     width: 100%;
-    height: 350px;
-    object-fit: cover;
+    object-fit: cover; /* ajusta la imagen sin deformarla */
     display: block;
-    margin-bottom: 0;
 }
 
+/* altura de las imagenes */
+.tarjeta img {
+    height: 350px;
+}
+
+/* titulos de las tarjetas */
 .tarjeta h2 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 22px;
     font-weight: 600;
-    color: #111;
     margin: 20px 20px 10px;
 }
 
+/* textos de las tarjetas */
 .tarjeta p {
     color: #666;
     line-height: 1.7;
     margin: 0 20px 15px;
 }
 
+/* enlaces de los productos */
 .enlace-producto {
     display: inline-block;
     color: #111;
@@ -168,52 +211,51 @@ body {
     margin: 0 20px 25px;
 }
 
+/* efecto de los enlaces */
 .enlace-producto:hover {
     color: #777;
     text-decoration: underline;
 }
 
-.pie-pagina {
-    padding: 25px 0;
-    border-top: 1px solid #eee;
-    text-align: center;
-    color: #666;
-    font-size: 13px;
-}
 
-.pie-pagina p {
-    margin: 0;
-}
+/* =================================
+   5. seccion de diseno
+================================= */
 
+/* espacio y fondo de la seccion */
 .seccion-diseno {
     padding: 80px 0;
-    background-color: #fff;
+    background: #fff;
 }
 
+/* texto de la seccion */
 .texto-diseno {
     max-width: 750px;
     margin-bottom: 40px;
 }
 
+/* titulo del diseno */
 .texto-diseno h1 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 48px;
     font-weight: 700;
     margin-bottom: 20px;
 }
 
+/* ultimo parrafo de la seccion */
 .texto-diseno > p:last-child {
     color: #666;
     font-size: 17px;
     line-height: 1.8;
 }
 
+/* bloques de diseno */
 .bloque-diseno {
     height: 100%;
     border: 1px solid #eee;
-    background-color: #fff;
+    background: #fff;
 }
 
+/* imagenes del diseno */
 .bloque-diseno img {
     width: 100%;
     height: 420px;
@@ -221,31 +263,33 @@ body {
     display: block;
 }
 
+/* espacio del contenido */
 .contenido-diseno {
     padding: 25px;
 }
 
+/* titulos de los bloques */
 .contenido-diseno h2 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 23px;
     font-weight: 600;
 }
 
+/* textos de los bloques */
 .contenido-diseno p {
     color: #666;
     line-height: 1.7;
     margin-bottom: 0;
 }
 
+/* frase destacada */
 .frase-diseno {
     margin-top: 80px;
     padding: 60px 20px;
-    text-align: center;
-    background-color: #f5f5f5;
+    text-align: center; /* centra el texto */
+    background: #f5f5f5;
 }
 
 .frase-diseno h2 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 36px;
     font-weight: 700;
 }
@@ -255,57 +299,64 @@ body {
     margin: 15px 0 25px;
 }
 
+
+/* =================================
+   6. seccion de productos
+================================= */
+
+/* espacio de las categorias */
 .productos-categoria {
     padding: 80px 0;
     min-height: 80vh;
-    background-color: #fff;
+    background: #fff;
 }
 
+/* titulo de las categorias */
 .productos-categoria h1 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 48px;
     font-weight: 700;
 }
 
+/* descripcion de las categorias */
 .descripcion-categoria {
     color: #777;
     font-size: 17px;
 }
 
+/* tarjetas de productos */
 .producto {
     height: 100%;
     border: 1px solid #eee;
-    background-color: #fff;
+    background: #fff;
     transition: transform 0.3s;
 }
 
-.producto:hover {
-    transform: translateY(-5px);
-}
-
+/* altura de las imagenes */
 .producto img {
-    width: 100%;
     height: 380px;
-    object-fit: cover;
 }
 
+/* informacion de cada producto */
 .producto-info {
     padding: 20px;
 }
 
+/* titulo del producto */
 .producto-info h2 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 21px;
 }
 
+/* descripcion del producto */
 .producto-info p {
     color: #777;
 }
 
+/* precio del producto */
 .producto-info span {
     font-weight: 700;
 }
 
+/* enlace para volver a la coleccion */
 .volver-coleccion {
     display: inline-block;
     margin-top: 40px;
@@ -318,6 +369,7 @@ body {
     text-decoration: underline;
 }
 
+/* colores disponibles */
 .colores {
     margin-top: 15px;
 }
@@ -327,133 +379,68 @@ body {
     font-weight: 600;
 }
 
+/* forma de los circulos de colores */
 .color {
     display: inline-block;
     width: 25px;
     height: 25px;
-    border-radius: 50%;
+    border-radius: 50%; /* hace que sean circulos */
     margin-right: 8px;
     border: 1px solid #ccc;
 }
 
-.color.verde {
-    background: #456b45;
-}
+/* colores de cada circulo */
+.color.verde { background: #456b45; }
+.color.marron { background: #795438; }
+.color.azul { background: #294b75; }
 
-.color.marron {
-    background: #795438;
-}
 
-.color.azul {
-    background: #294b75;
-}
+/* =================================
+   7. seccion de especificaciones
+================================= */
 
-@media (max-width: 991px) {
-    .portada {
-        padding: 50px 0;
-        text-align: center;
-        background-position: 60% center;
-    }
-
-    .portada h1 {
-        font-size: 42px;
-    }
-
-    .portada h2 {
-        font-size: 32px;
-    }
-
-    .portada img {
-        margin-top: 30px;
-    }
-
-    .nav-link {
-        margin-left: 0;
-    }
-}
-
-@media (max-width: 768px) {
-    .seccion-caracteristicas {
-        padding: 50px 0;
-    }
-
-    .seccion-caracteristicas h1 {
-        font-size: 36px;
-    }
-
-    .tarjeta img {
-        height: 300px;
-    }
-
-    .tarjeta {
-        margin-bottom: 10px;
-    }
-
-    .seccion-diseno {
-        padding: 50px 0;
-    }
-
-    .texto-diseno h1 {
-        font-size: 36px;
-    }
-
-    .bloque-diseno img {
-        height: 320px;
-    }
-
-    .frase-diseno {
-        margin-top: 50px;
-        padding: 40px 15px;
-    }
-
-    .frase-diseno h2 {
-        font-size: 28px;
-    }
-}
+/* portada de especificaciones */
 .portada-especificaciones {
-    min-height: 420px;
     display: flex;
     align-items: center;
     background: #e9e9e9;
+    min-height: 420px;
     padding: 80px 0;
 }
 
+/* titulo de la portada */
 .portada-especificaciones h1 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 55px;
     font-weight: 700;
     margin: 15px 0;
 }
 
+/* texto de la portada */
 .portada-especificaciones p {
     color: #555;
 }
 
-.subtitulo {
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 3px;
-}
-
+/* espacio de la seccion */
 .seccion-especificaciones {
-    padding-top: 90px;
-    padding-bottom: 100px;
+    padding: 90px 0 100px;
 }
 
+/* ancho del titulo */
 .titulo-especificaciones {
     max-width: 600px;
 }
 
 .titulo-especificaciones h2 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 35px;
     font-weight: 700;
 }
 
+/* descripcion */
 .titulo-especificaciones p {
     color: #666;
 }
 
+/* tarjetas con informacion tecnica */
 .tarjeta-especificacion {
     background: #f5f5f5;
     padding: 35px;
@@ -466,7 +453,6 @@ body {
 }
 
 .tarjeta-especificacion h3 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 23px;
     font-weight: 600;
     margin-top: 20px;
@@ -477,56 +463,50 @@ body {
     margin-bottom: 0;
 }
 
-@media (max-width: 768px) {
-    .portada-especificaciones h1 {
-        font-size: 40px;
-    }
 
-    .titulo-especificaciones h2 {
-        font-size: 28px;
-    }
-}
+/* =================================
+   8. seccion de contacto
+================================= */
+
+/* portada de contacto */
 .portada-contacto {
-    min-height: 350px;
     display: flex;
     align-items: center;
     background: #e9e9e9;
+    min-height: 350px;
     padding: 70px 0;
 }
 
+/* titulo de la portada */
 .portada-contacto h1 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 55px;
     font-weight: 700;
     margin: 15px 0;
 }
 
+/* texto de la portada */
 .portada-contacto p {
     color: #555;
 }
 
+/* espacio de la seccion */
 .seccion-contacto {
-    padding-top: 90px;
-    padding-bottom: 100px;
+    padding: 90px 0 100px;
 }
 
+/* titulo de contacto */
 .seccion-contacto h2 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 20px;
 }
 
-.seccion-contacto p {
-    color: #666;
-}
-
+/* datos de contacto */
 .datos-contacto {
     margin-top: 45px;
 }
 
 .datos-contacto h5 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-weight: 600;
 }
@@ -535,28 +515,91 @@ body {
     margin-bottom: 25px;
 }
 
+/* campos del formulario */
 .seccion-contacto .form-control {
     padding: 12px;
     border-radius: 0;
     border: 1px solid #ccc;
 }
 
+/* cuando seleccionamos un campo */
 .seccion-contacto .form-control:focus {
     border-color: #222;
     box-shadow: none;
 }
 
+/* boton del formulario */
 .seccion-contacto .btn {
     padding: 12px 28px;
     border-radius: 0;
 }
 
-@media (max-width: 768px) {
-    .portada-contacto h1 {
-        font-size: 42px;
+
+/* =================================
+   9. pie de pagina
+================================= */
+
+/* estilos del footer */
+.pie-pagina {
+    padding: 25px 0;
+    border-top: 1px solid #eee;
+    text-align: center;
+    color: #666;
+    font-size: 13px;
+}
+
+/* saca el margen del parrafo */
+.pie-pagina p {
+    margin: 0;
+}
+
+
+/* =================================
+   10. diseno responsive
+================================= */
+
+/* adapta la pagina a pantallas medianas */
+@media (max-width: 991px) {
+
+    .portada {
+        padding: 50px 0;
+        text-align: center;
+        background-position: 60% center;
     }
 
-    .seccion-contacto h2 {
-        font-size: 27px;
+    .portada h1 { font-size: 42px; }
+    .portada h2 { font-size: 32px; }
+    .portada img { margin-top: 30px; }
+    .nav-link { margin-left: 0; }
+}
+
+/* adapta la pagina a celulares */
+@media (max-width: 768px) {
+
+    .seccion-caracteristicas,
+    .seccion-diseno {
+        padding: 50px 0;
     }
+
+    .seccion-caracteristicas h1,
+    .texto-diseno h1 {
+        font-size: 36px;
+    }
+
+    .tarjeta img { height: 300px; }
+    .tarjeta { margin-bottom: 10px; }
+    .bloque-diseno img { height: 320px; }
+
+    .frase-diseno {
+        margin-top: 50px;
+        padding: 40px 15px;
+    }
+
+    .frase-diseno h2 { font-size: 28px; }
+
+    .portada-especificaciones h1 { font-size: 40px; }
+    .titulo-especificaciones h2 { font-size: 28px; }
+
+    .portada-contacto h1 { font-size: 42px; }
+    .seccion-contacto h2 { font-size: 27px; }
 }
